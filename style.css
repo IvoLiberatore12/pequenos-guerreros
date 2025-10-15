@@ -1,0 +1,314 @@
+/* === IMPORTAR FUENTES === */
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Moo+Lah+Lah&display=swap');
+
+
+/* === ESTILOS GENERALES === */
+
+/* Estilo del encabezado (header) */
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* Estilo del logo en el header */
+header img {
+  height: 90px;
+  width: auto;
+}
+
+/* Lista del menú de navegación */
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Espaciado entre los ítems del menú */
+.menu li {
+  margin: 0 10px;
+}
+
+/* Estilo de los enlaces del menú */
+.menu a {
+  text-decoration: none;
+  color: rgb(17, 189, 174);
+}
+
+/* Efecto al pasar el mouse sobre los enlaces del menú */
+.menu a:hover {
+  color: #3af7e7;
+  text-decoration: underline;
+}
+
+
+/* === SECCIÓN: FRASE DE IMPACTO === */
+
+/* Frase principal al inicio de la página */
+.frase-impacto {
+  font-size: 35px;
+  padding: 10px;
+  margin: 30px auto;
+  text-align: center;
+  font-family: "Agbalumo", system-ui;
+  color: rgb(17, 189, 174);
+  max-width: 800px;
+  line-height: 1.4;
+}
+
+
+/* === SECCIÓN: PROYECTOS === */
+
+/* Contenedor de las tarjetas de proyectos */
+.proyectos {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+  justify-content: center;
+  width: 100%;
+  gap: 20px; /* Espacio moderno entre tarjetas */
+  padding: 20px 0;
+}
+
+/* Imagen dentro de cada tarjeta de proyecto */
+.proyectos img {
+  width: 100%;       /* Ocupa todo el ancho de la tarjeta */
+  max-width: 330px;  /* Pero no más de 330px en escritorio */
+  height: auto;
+}
+
+/* Tarjeta individual de proyecto */
+.caja-proyectos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 330px; /* Asegura que la tarjeta no se haga demasiado ancha */
+}
+
+
+/* === SECCIÓN: DONAR (FONDO Y CONTENIDO) === */
+
+/* Contenedor principal de la página de donación */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./imagenes/img-fondo-dona.jpg);
+  background-size: cover; /* Mejor que 100%: cubre sin deformar */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px;
+  margin: 40px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Agbalumo", system-ui;
+}
+
+/* Lista en la sección de donación */
+.contenedor ul {
+  list-style: none;
+  text-align: left;
+  max-width: 600px;
+}
+
+/* Párrafos en la sección de donación */
+.contenedor p {
+  font-size: 20px;
+  text-align: center;
+  max-width: 600px;
+}
+
+
+/* === BOTÓN DE DONAR === */
+
+/* Contenedor para centrar el botón */
+.centrar-boton {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+/* Estilo del botón principal de donación */
+.boton-donar {
+  background-color: #3ea6ad;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Efecto hover del botón de donación */
+.boton-donar:hover {
+  background-color: #98fdfd;
+  color: #333;
+}
+
+
+/* === FORMULARIO DE DONACIÓN === */
+
+/* Estilo del formulario */
+.formulario-donacion {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 30px auto;
+  width: 90%;
+  color: #333;
+}
+
+/* Título del formulario */
+.formulario-donacion h3 {
+  margin-top: 0;
+  color: #555;
+  text-align: center;
+}
+
+/* Etiquetas del formulario */
+.formulario-donacion label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Campos de entrada del formulario */
+.formulario-donacion input,
+.formulario-donacion textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Botón de envío del formulario */
+.formulario-donacion .boton-enviar {
+  background-color: #3ea6ad;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* Efecto hover del botón de envío */
+.formulario-donacion .boton-enviar:hover {
+  background-color: #98fdfd;
+  color: #333;
+}
+
+
+/* === FOOTER === */
+
+/* Estilo del pie de página */
+.footer {
+  background-color: rgb(17, 189, 174);
+  padding: 25px 15px;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid #e0d0ff;
+  color: white;
+}
+
+
+/* === RESPONSIVE: TABLET (hasta 1024px) === */
+@media (max-width: 1024px) {
+  /* Ajustar tamaño de logo en tablet */
+  header img {
+    height: 70px;
+  }
+
+  /* Reducir tamaño de la frase de impacto */
+  .frase-impacto {
+    font-size: 30px;
+    max-width: 700px;
+  }
+
+  /* Imágenes de proyectos más pequeñas */
+  .proyectos img {
+    max-width: 280px;
+  }
+
+  /* Ajustar padding en donación */
+  .contenedor {
+    padding: 30px;
+  }
+}
+
+
+/* === RESPONSIVE: MÓVIL (hasta 768px) === */
+@media (max-width: 768px) {
+  /* Header en columna: logo arriba, menú abajo */
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  header img {
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  /* Menú en columna */
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu li {
+    margin: 8px 0;
+  }
+
+  /* Frase de impacto más pequeña */
+  .frase-impacto {
+    font-size: 26px;
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  /* Proyectos en columna */
+  .proyectos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Contenedor de donación ajustado */
+  .contenedor {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .contenedor p {
+    font-size: 18px;
+  }
+
+  /* Formulario más ancho en móvil */
+  .formulario-donacion {
+    width: 95%;
+    max-width: none;
+    padding: 20px;
+  }
+
+  /* Botón de donar más grande en móvil */
+  .boton-donar {
+    padding: 14px 35px;
+    font-size: 20px;
+  }
+}

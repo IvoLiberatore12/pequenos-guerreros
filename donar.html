@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Doná - Pequeños Guerreros</title>
+</head>
+<body>
+    
+ <header>
+     <img src="./imagenes/logo.jpg" alt="Logo de Pequeños Guerreros">
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Nosotros</a></li>
+        <li><a href="index.html#proyectos">Proyectos</a></li>
+        <li><a href="donar.html">Doná</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+ </header>
+
+ <main class="contenedor">
+    <h1>Doná con el corazón</h1>
+    
+    <p>
+      En <strong>Pequeños Guerreros</strong>, cada gesto cuenta.  
+      No importa el monto: lo que importa es que, gracias a vos,  
+      un niño podrá sonreír en medio de su lucha.
+    </p>
+
+    <p>
+      Tu donación se transforma en:
+    </p>
+    <ul>
+      <li>Material para terapias lúdicas</li>
+      <li>Maletas de alegría para nuevos guerreros</li>
+      <li>Días de familia fuera del hospital</li>
+      <li>Apoyo emocional para hermanos y padres</li>
+    </ul>
+
+    <p style="font-style: italic; margin-top: 30px;">
+      “No necesitás cambiar el mundo entero.  
+      Solo cambiar el mundo de un niño.”
+    </p>
+ </main>
+
+<!-- Botón que muestra el formulario -->
+<div class="centrar-boton">
+<button id="boton-donar" class="boton-donar">Doná ahora</button>
+</div>
+
+<!-- Formulario oculto -->
+<form id="formulario-donacion" class="formulario-donacion" style="display: none;">
+  <h3>Gracias por tu generosidad</h3>
+  
+  <label for="nombre">Nombre y apellido:</label>
+  <input type="text" id="nombre" name="nombre" required>
+
+  <label for="monto">Monto (₡):</label>
+  <input type="number" id="monto" name="monto" min="1000" required>
+
+  <label for="mensaje">¿Por qué donás? (opcional):</label>
+  <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+
+  <button type="submit" class="boton-enviar">Enviar donación</button>
+</form>
+
+<div id="mensaje-exito" style="display: none; text-align: center; margin-top: 20px;">
+  <p style="font-size: 18px; color: #009c82; font-weight: bold;">
+    ¡Gracias por querer contribuir! 🙏<br>
+    <small>(Los datos no se envían a ningún lado. Esta es una página de prueba y aprendizaje.)</small>
+  </p>
+</div>
+
+<script>
+  // 1. Botón que muestra el formulario
+  const boton = document.getElementById('boton-donar');
+  const formulario = document.getElementById('formulario-donacion');
+
+  boton.addEventListener('click', function() {
+    formulario.style.display = 'block';
+    boton.disabled = true;
+    boton.textContent = 'Formulario abierto';
+  });
+
+  // 2. Evitamos el envío real del formulario
+  formulario.addEventListener('submit', function(evento) {
+    
+    // 3. Detenemos el comportamiento normal (que recargaría la página)
+    evento.preventDefault();
+
+    // 4. Ocultamos el formulario
+    formulario.style.display = 'none';
+
+    // 5. Mostramos el mensaje de agradecimiento
+    document.getElementById('mensaje-exito').style.display = 'block';
+
+    // 6. Opcional: volver a activar el botón principal
+    boton.disabled = false;
+    boton.textContent = 'Doná ahora';
+  });
+</script>
+
+
+<footer class="footer">
+  <p class="frase-footer">
+    En Pequeños Guerreros, cada gesto se convierte en esperanza.
+  </p>
+  
+  <p class="copyright">
+    © 2025 Pequeños Guerreros. Todos los derechos reservados.<br>
+    <small>Gracias por ser parte de esta lucha.</small>
+  </p>
+</footer>
+
+
+</body>
+</html>
